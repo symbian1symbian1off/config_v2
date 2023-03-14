@@ -1,0 +1,38 @@
+
+"inbounds": [
+    {
+      "tag": "proxy",
+      "port": 1080,
+      "listen": "0.0.0.0",
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true
+      }
+    },
+    {
+      "listen": "0.0.0.0",
+      "port": 8080,
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true
+      },
+      "tag": "http"
+    }
+  ]
+  
